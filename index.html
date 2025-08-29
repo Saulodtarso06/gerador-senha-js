@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    title>SenhaGeradorJS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>🔐 SenhaGeradorJS</h1>
+		<p>Gerador Online de Senhas Fortes - de 6 a 128 caracteres</p>
+		<div></div>
+
+        <section class="output">
+            <input type="text" id="password-display" readonly placeholder="Sua senha aparecerá aqui" />
+            <button id="copy-btn">Copiar Senha</button>
+        </section>
+
+        <section class="controls">
+            <label for="length">Comprimento da senha: <span id="length-value">12</span></label>
+            <input type="range" id="length" min="6" max="128" value="12" />
+
+            <div class="checkboxes">
+                <label><input type="checkbox" id="uppercase" checked /> Letras Maiúsculas</label>
+                <label><input type="checkbox" id="numbers" checked /> Números</label>
+                <label><input type="checkbox" id="symbols" /> Símbolos</label>
+            </div>
+
+            <button id="generate-btn">Gerar Senha</button>
+
+            <div class="strength-bar">
+                <span id="strength-label">Segurança:</span>
+                <div id="strength-indicator"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
